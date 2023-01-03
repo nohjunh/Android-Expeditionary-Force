@@ -37,6 +37,10 @@ android {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.0'
+}
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -79,3 +83,5 @@ dependencies {
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}
