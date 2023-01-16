@@ -3,6 +3,7 @@
   <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
+
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
@@ -14,6 +15,7 @@
           </set>
         </option>
       </GradleProjectSettings>
+
     </option>
   </component>
 </project>
