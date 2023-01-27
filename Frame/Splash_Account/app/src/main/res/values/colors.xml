@@ -10,4 +10,5 @@
 
     <color name="Splash_bg_color">#DDDDDD</color>
     <color name="mainColor">#DDDDDD</color>
+    <color name="grey">#DDDDDD</color>
 </resources>
