@@ -1,7 +1,8 @@
-package com.nohjunh.version1
+package com.nohjunh.version1.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nohjunh.version1.R
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
