@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.nohjunh.version1.R
 import com.nohjunh.version1.databinding.ActivityPreviewBinding
 import com.nohjunh.version1.view.preview.login.LoginActivity
 import com.nohjunh.version1.view.preview.signup.SignUpActivity
@@ -37,6 +38,7 @@ class PreviewActivity : AppCompatActivity() {
                 delay(300)
                 val intent = Intent(this@PreviewActivity, LoginActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 dialog.dismiss()
             }
         }
@@ -47,6 +49,7 @@ class PreviewActivity : AppCompatActivity() {
                 delay(300)
                 val intent = Intent(this@PreviewActivity, SignUpActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 dialog.dismiss()
             }
         }
