@@ -17,18 +17,18 @@
         <item name="windowNoTitle">true</item>
 
     </style>
-
     <!-- Splash 처리 -->
-    <style name="Theme.Version1.Splash" parent="Theme.SplashScreen">
-        <!-- 백그라운드 color -->
-        <item name="windowSplashScreenBackground">@color/Splash_bg_color</item>
+    <style name="Theme.Version1.Splash" parent="Theme.SplashScreen.IconBackground">
         <!-- splash icon -->
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash_ic</item>
+        <!-- 백그라운드 color -->
+        <item name="windowSplashScreenBackground">@color/Splash_bg_color</item>
         <!-- splash delay -->
-        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <!-- splash icon back color
+        <item name="windowSplashScreenIconBackgroundColor">@color/white</item> -->
         <!-- splash 종료 후 기본 테마 지정 -->
         <item name="postSplashScreenTheme">@style/Theme.Version1</item>
-
     </style>
 
 </resources>
