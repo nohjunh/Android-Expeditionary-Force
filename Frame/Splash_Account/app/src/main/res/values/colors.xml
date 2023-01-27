@@ -11,4 +11,8 @@
     <color name="Splash_bg_color">#DDDDDD</color>
     <color name="mainColor">#DDDDDD</color>
     <color name="grey">#DDDDDD</color>
+    <color name="DarkGrey">#7F8487</color>
+    <color name="blue">#1D1CE5</color>
+    <color name="lightBlue">#47B5FF</color>
+    <color name="DarkBlue">#5DA7DB</color>
 </resources>

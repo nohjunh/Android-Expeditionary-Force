@@ -8,64 +8,155 @@
     android:background="@color/white"
     tools:context=".view.preview.login.LoginActivity">
 
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:backgroundTint="@color/white"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="long TEST"
+        android:text="BrandName"
         android:textSize="35dp"
         android:textColor="@color/black"
-        android:fontFamily="@font/nanumgothicbold"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/nanumgothicextrabold"
+        android:layout_marginTop="75dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="short TEST"
         android:textSize="25dp"
         android:textColor="@color/grey"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nanumgothicbold"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="30dp"
         app:layout_constraintTop_toBottomOf="@id/textView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
+        <LinearLayout
+            android:id="@+id/loginForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="55dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/textView2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="ServiceID" />
+
+            <EditText
+                android:id="@+id/serviceId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="비밀번호" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selfLayout"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#1B2430"
+        android:background="@drawable/previewbutton"
+        app:layout_constraintTop_toBottomOf="@id/loginForm">
+        <Button
+            android:id="@+id/selfBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff0000">
+        </Button>
+        <TextView
+            android:id="@+id/selfText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자체 로그인"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nanumgothicbold"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/selfLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+        <Button
+            android:id="@+id/explanationBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff0000">
+        </Button>
+        <ImageView
+            android:id="@+id/explanationImg"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/exclamation"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/explanationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="약관 보기"
+            android:textSize="11dp"
+            android:textColor="@color/DarkBlue"
+            android:fontFamily="@font/nanumgothicbold"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/OAuths"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
         android:orientation="vertical"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/selfLayout"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/previewbutton">
-            <Button
-                android:id="@+id/selfBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00ff0000">
-            </Button>
-            <TextView
-                android:id="@+id/selfText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="자체 로그인"
-                android:textColor="@color/black"
-                android:fontFamily="@font/nanumgothiclight"
-                android:backgroundTint="@color/white"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/instaLayout"
@@ -93,8 +184,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="insta 로그인"
-                android:textColor="@color/black"
-                android:fontFamily="@font/nanumgothiclight"
+                android:textSize="13dp"
+                android:textColor="@color/DarkGrey"
+                android:fontFamily="@font/nanumgothicbold"
                 android:backgroundTint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,8 +220,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Naver 로그인"
-                android:textColor="@color/black"
-                android:fontFamily="@font/nanumgothiclight"
+                android:textSize="13dp"
+                android:textColor="@color/DarkGrey"
+                android:fontFamily="@font/nanumgothicbold"
                 android:backgroundTint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -163,8 +256,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Google 로그인"
-                android:textColor="@color/black"
-                android:fontFamily="@font/nanumgothiclight"
+                android:textSize="13dp"
+                android:textColor="@color/DarkGrey"
+                android:fontFamily="@font/nanumgothicbold"
                 android:backgroundTint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
