@@ -1,10 +1,13 @@
-package com.nohjunh.basic
+package com.nohjunh.basic.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.nohjunh.basic.MainViewModel
 import com.nohjunh.basic.databinding.ActivityMainBinding
+import com.nohjunh.basic.fragment.FragActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+        binding.goFrag.setOnClickListener {
+            val intent = Intent(this, FragActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
