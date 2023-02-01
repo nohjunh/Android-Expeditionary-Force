@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/imageUrlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nameContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageUrlContainer">
+        <TextView
+            android:id="@+id/nameTextView"
+            android:text="Name : "
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/nameView"
+            android:text="TEST"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/plantIdContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameContainer">
+        <TextView
+            android:id="@+id/plantIdTextView"
+            android:text="plantId : "
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/plantIdView"
+            android:text="TEST"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/growZoneNumberContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plantIdContainer">
+        <TextView
+            android:id="@+id/growZoneNumberTextView"
+            android:text="growZoneNumber : "
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/growZoneNumberView"
+            android:text="TEST"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wateringIntervalContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/growZoneNumberContainer">
+        <TextView
+            android:id="@+id/wateringIntervalTextView"
+            android:text="wateringInterval : "
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/wateringIntervalView"
+            android:text="TEST"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/descriptionContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wateringIntervalContainer">
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:text="description : "
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/descriptionView"
+            android:text="TEST"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
