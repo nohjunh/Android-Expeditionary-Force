@@ -4,13 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.nohjunh.basic.database.dao.TextDAO
-import com.nohjunh.basic.database.entity.TextEntity
+import com.nohjunh.basic.database.dao.SentenceDAO
+import com.nohjunh.basic.database.entity.SentenceEntity
 
-@Database(entities = [TextEntity::class], version = 1)
+@Database(entities = [SentenceEntity::class], version = 1)
 abstract class TextDataBase : RoomDatabase() {
 
-    abstract fun textDAO() : TextDAO
+    abstract fun sentenceDAO() : SentenceDAO
 
     companion object {
         @Volatile

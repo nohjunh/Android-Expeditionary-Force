@@ -4,18 +4,18 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.nohjunh.basic.database.entity.TextEntity
+import com.nohjunh.basic.database.entity.SentenceEntity
 
 @Dao
-interface TextDAO {
+interface SentenceDAO {
 
-    @Query("SELECT * FROM textTable")
-    fun getAllData() : List<TextEntity>
+    @Query("SELECT * FROM SentenceTable")
+    fun getAllData() : List<SentenceEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(text : TextEntity)
+    fun insert(text : SentenceEntity)
 
-    @Query("DELETE FROM textTable")
+    @Query("DELETE FROM SentenceTable")
     fun delAllData()
 
 }

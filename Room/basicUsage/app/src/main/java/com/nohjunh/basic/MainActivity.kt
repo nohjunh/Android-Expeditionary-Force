@@ -3,7 +3,7 @@ package com.nohjunh.basic
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nohjunh.basic.database.TextDataBase
-import com.nohjunh.basic.database.entity.TextEntity
+import com.nohjunh.basic.database.entity.SentenceEntity
 import com.nohjunh.basic.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,20 +23,20 @@ class MainActivity : AppCompatActivity() {
 
         binding.insertBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                database.textDAO().insert(TextEntity(0, binding.ETview.text.toString()))
+                database.sentenceDAO().insert(SentenceEntity(0, binding.ETview.text.toString()))
                 binding.ETview.setText("")
             }
         }
 
         binding.getBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                Timber.tag("데이터보기").e("${database.textDAO().getAllData()}")
+                Timber.tag("데이터보기").e("${database.sentenceDAO().getAllData()}")
             }
         }
 
         binding.delBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                database.textDAO().delAllData()
+                database.sentenceDAO().delAllData()
             }
         }
 

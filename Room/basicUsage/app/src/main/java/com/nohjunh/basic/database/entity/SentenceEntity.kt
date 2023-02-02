@@ -4,11 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "textTable")
-data class TextEntity (
+@Entity(tableName = "SentenceTable")
+data class SentenceEntity (
      @PrimaryKey(autoGenerate = true)
      @ColumnInfo(name = "id")
      var id : Int,
-     @ColumnInfo(name = "text")
-     var text : String
+     @ColumnInfo(name = "sentence")
+     var sentence : String
 )
