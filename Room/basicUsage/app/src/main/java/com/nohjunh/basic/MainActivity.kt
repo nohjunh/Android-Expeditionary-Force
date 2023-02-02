@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nohjunh.basic.database.TextDataBase
 import com.nohjunh.basic.database.entity.SentenceEntity
+import com.nohjunh.basic.database.entity.WordEntity
 import com.nohjunh.basic.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.insertBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 database.sentenceDAO().insert(SentenceEntity(0, binding.ETview.text.toString()))
+                database.wordDAO().insert(WordEntity(0, binding.ETview.text.toString()))
                 binding.ETview.setText("")
             }
         }
@@ -31,12 +33,14 @@ class MainActivity : AppCompatActivity() {
         binding.getBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 Timber.tag("데이터보기").e("${database.sentenceDAO().getAllData()}")
+                Timber.tag("데이터보기").e("${database.wordDAO().getAllData()}")
             }
         }
 
         binding.delBtn.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 database.sentenceDAO().delAllData()
+                database.wordDAO().delAllData()
             }
         }
 
