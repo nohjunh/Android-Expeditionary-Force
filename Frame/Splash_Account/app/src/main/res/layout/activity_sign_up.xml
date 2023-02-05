@@ -22,7 +22,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Brand 계정 만들기"
+        android:text="XXXXX 계정 만들기"
         android:textSize="25dp"
         android:textColor="@color/black"
         android:fontFamily="@font/nanumgothicbold"
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="200dp"
+            android:layout_marginRight="220dp"
             android:background="@drawable/previewbutton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent">
