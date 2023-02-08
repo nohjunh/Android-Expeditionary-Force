@@ -13,3 +13,7 @@ https://velog.io/@nohjunh/Coroutines
 https://velog.io/@nohjunh/RecyclerView
 
 https://velog.io/@nohjunh/LiveData
+
+https://velog.io/@nohjunh/workManager
+
+https://velog.io/@nohjunh/Annotation
