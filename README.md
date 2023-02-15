@@ -17,3 +17,9 @@ https://velog.io/@nohjunh/LiveData
 https://velog.io/@nohjunh/workManager
 
 https://velog.io/@nohjunh/Annotation
+
+https://velog.io/@nohjunh/Repository-Pattern
+
+https://velog.io/@nohjunh/Dependency-Injection
+
+https://velog.io/@nohjunh/Hilt
