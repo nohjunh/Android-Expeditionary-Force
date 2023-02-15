@@ -9,6 +9,8 @@ import com.nohjunh.test.databinding.FragmentBlankBinding
 
 class BlankFragment : Fragment() {
 
+    // OnCreateView()에서 LayoutInflater(inflater:LayutInflater)를 받기에
+    // null값으로 선언하고 시작
     private var _binding : FragmentBlankBinding? = null
     private val binding get() = _binding!!
 
