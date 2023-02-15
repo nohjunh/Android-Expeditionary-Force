@@ -10,6 +10,8 @@ https://velog.io/@nohjunh/Coil
 
 https://velog.io/@nohjunh/Coroutines
 
+https://velog.io/@nohjunh/The-activity-lifecycle
+
 https://velog.io/@nohjunh/RecyclerView
 
 https://velog.io/@nohjunh/LiveData
