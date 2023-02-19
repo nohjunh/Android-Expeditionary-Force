@@ -1,0 +1,22 @@
+
+
+DiffUtil
+- 두 데이터 셋의 차이를 계산
+- 두 데이터 셋에서 반영되지 않은 부분만을 반영시켜줄 수 있음.
+- 리스트의 아이템항목을 비교하는 과정에서 효율적
+
+
+ListAdapter
+- currentList로 현재 데이터셋 참조
+- submitList로 리스트 데이터셋 갱신
+-
+RecylcerView Adapter를 List Adapter로 구현하면 데이터가
+어떻게 바뀔지 submitList로 전체 데이터 셋을 넘겨주면
+백그라운드 스레드에서 DiffUtil을 통해 결과를 만들어내고
+화면에 반영한다.
+
+RecyclerView Adapter가 ListAdapter를 상속하고
+초기화 시 두 데이터 셋의 차이를 계산할 DiffUitl 콜백을 넣어줌.
+
+즉, RecyclerView Adapter를 ListAdapter로 상속하게 하면
+구체적인 내용은 신경 안써도 나머지는 자동으로 백그라운드에서 작업을 처리함.
