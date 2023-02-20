@@ -2,6 +2,7 @@ package com.nohjunh.test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.LiveData
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         setupTouchHelper(view)
 
         viewModel.liveDataSet.observe(this, Observer {
-            adapterEx.submitList(it)
+            adapterEx.submitList(it.toMutableList())
         })
 
         viewModel.start()
@@ -102,15 +103,16 @@ class MainActivity : AppCompatActivity() {
                 /*
                     스와이프를 취했을 때 동작 정의
                  */
-                //dataSet.removeAt(position)
-                //_liveDataSet.value = dataSet
+                viewModel.deleteData(position)
+                Log.d("test", "$position")
 
                 Snackbar.make(view, "${dataInstance.name}의 스와이프 감지", Snackbar.LENGTH_SHORT).apply {
                     setAction("취소") {
                         /*
                             취소를 눌렀을 때 취할 동작 정의
                          */
-                        viewModel.addData(adapterEx.currentList)
+                        viewModel.addData(dataInstance)
+                        Log.d("test", "${adapterEx.currentList}")
                     }
                 }.show()
             }

@@ -20,8 +20,14 @@ class MainViewModel : ViewModel() {
         _liveDataSet.value = dataSet
     }
 
-    fun addData(data : List<DataEx>) {
-        _liveDataSet.value = data
+    fun addData(data : DataEx) {
+        dataSet.add(data)
+        _liveDataSet.value = dataSet
+    }
+
+    fun deleteData(position : Int) {
+        dataSet.removeAt(position)
+        _liveDataSet.value = dataSet
     }
 
 }
